@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Personify</string>
+    <string name="app_name_header">Hi, My name is</string>
+    <string name="app_name_birthday">Birthday \t MM/DD/YYYY</string>
+    <string name="app_name_age">Age</string>
+    <string name="app_name_email">Email Address</string>
+    <string name="app_name_mobile">Mobile Number</string>
+    <string name="app_name_address">Address</string>
+    <string name="app_name_contactPerson">Contact Person</string>
+    <string name="app_name_contactPerson_number">Contact Person\'s Phone Number</string>
+    <string name="app_network">No internet connection</string>
+    <string name="app_name_details"><u>Details</u></string>
+    <string name="app_name_gender">Gender</string>
+    <string name="app_name_postal">PostCode</string>
+    <string name="app_name_lat">Latitude  </string>
+    <string name="app_name_long">Longitude  </string>
+    <string name="app_name_offset">Offset</string>
+    <string name="app_name_description">Description</string>
+    <string name="app_name_reg">Registered</string>
+    <string name="app_name_id">Id</string>
+    <string name="app_name_value">Value</string>
+    <string name="app_name_name">Name</string>
+    <string name="app_name_nat">Nat</string>
+    <string name="app_name_login">Login</string>
+    <string name="app_name_uuid">Uuid</string>
+    <string name="app_name_username">Username</string>
+    <string name="app_name_password">Password</string>
+    <string name="app_name_salt">Salt</string>
+    <string name="app_name_md5">Md5</string>
+    <string name="app_name_sha1">Sha1</string>
+    <string name="app_name_sha256">Sha256</string>
+    <string name="app_name_coordinates">Coordinates</string>
+    <string name="app_name_timeZone">Timezone</string>
+</resources>

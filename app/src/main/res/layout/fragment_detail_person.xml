@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parentContent"
+    tools:context=".view.fragment.DetailPersonFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            style="@style/withMatchParent"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="15dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                style="@style/withMatchParent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgPersonD"
+                    style="@style/imgLayout"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/display_img"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imgBacks"
+                    style="@style/imgBack"
+                    android:contentDescription="@string/app_name"
+                    android:padding="2dp"
+                    android:src="@drawable/baseline_keyboard_backspace_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/headerMame"
+                    style="@style/withMatchParent"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/app_name_header"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgPersonD" />
+
+                <TextView
+                    android:id="@+id/txtNameD"
+                    style="@style/wrapContent"
+                    android:padding="2dp"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/headerMame" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardGender"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtNameD">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtGender"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_gender"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtGenderData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtGender" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAge"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardGender">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtAge"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_age"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtAgeDataD"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtAge" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardBirthday"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardAge">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtBirthDay"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_birthday"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtBirthDayDataD"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtBirthDay" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardEmail"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardBirthday">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtEmail"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_email"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtEmailDataD"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtEmail" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardMobile"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardEmail">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtMobile"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_mobile"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtMobileDataD"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtMobile" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardAddress"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardMobile">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtAddress"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_address"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtAddressDataD"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtAddress" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPostal"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardAddress">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtPostal"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_postal"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtPostalData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtPostal" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCoordinate"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardPostal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtCoordinate"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_coordinates"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtCoordinateLat"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_lat"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtCoordinate" />
+
+                        <TextView
+                            android:id="@+id/txtCoordinateLatData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txtCoordinateLat"
+                            app:layout_constraintTop_toBottomOf="@id/txtCoordinate" />
+
+                        <TextView
+                            android:id="@+id/txtCoordinateLong"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_long"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtCoordinateLat" />
+
+                        <TextView
+                            android:id="@+id/txtCoordinateLongData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="@+id/txtCoordinateLong"
+                            app:layout_constraintTop_toBottomOf="@id/txtCoordinateLat" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardTimeZone"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardCoordinate">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtTimeZone"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_timeZone"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtOffset"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_offset"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtTimeZone" />
+
+                        <TextView
+                            android:id="@+id/txtOffsetData"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtOffset"
+                            app:layout_constraintTop_toBottomOf="@id/txtTimeZone" />
+
+                        <TextView
+                            android:id="@+id/txtDescription"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_description"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtOffset" />
+
+                        <TextView
+                            android:id="@+id/txtDescriptionData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtDescription"
+                            app:layout_constraintTop_toBottomOf="@id/txtOffset" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardContact"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardTimeZone">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtContact"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_contactPerson"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtContactDataD"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtContact" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardContactPerson"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardContact">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtContactPerson"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_contactPerson_number"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtContactPersonDataD"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtContactPerson" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardRegister"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardContactPerson">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtRegister"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_reg"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtRegDate"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_offset"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtRegister" />
+
+                        <TextView
+                            android:id="@+id/txtRegDateData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtRegDate"
+                            app:layout_constraintTop_toBottomOf="@id/txtRegister" />
+
+                        <TextView
+                            android:id="@+id/txtRegAge"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_description"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtRegDate" />
+
+                        <TextView
+                            android:id="@+id/txtRegAgeData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtRegAge"
+                            app:layout_constraintTop_toBottomOf="@id/txtRegDate" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardId"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardRegister">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtId"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_id"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtIdName"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_name"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtId" />
+
+                        <TextView
+                            android:id="@+id/txtIdNameData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtIdName"
+                            app:layout_constraintTop_toBottomOf="@id/txtId" />
+
+                        <TextView
+                            android:id="@+id/txtValue"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_value"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtIdName" />
+
+                        <TextView
+                            android:id="@+id/txtValueData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtValue"
+                            app:layout_constraintTop_toBottomOf="@id/txtIdName" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardNat"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardId">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtNat"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_nat"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtNatData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtNat" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLogin"
+                    style="@style/withMatchParent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="4dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardNat">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        style="@style/withMatchParent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txtLogin"
+                            style="@style/wrapContent"
+                            android:padding="2dp"
+                            android:text="@string/app_name_login"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtUid"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_uuid"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtLogin"
+                            tools:ignore="TooManyViews" />
+
+                        <TextView
+                            android:id="@+id/txtUidData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtUid"
+                            app:layout_constraintTop_toBottomOf="@id/txtLogin" />
+
+                        <TextView
+                            android:id="@+id/txtUsername"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_username"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtUidData" />
+
+                        <TextView
+                            android:id="@+id/txtUsernameData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtUsername"
+                            app:layout_constraintTop_toBottomOf="@id/txtUidData" />
+
+                        <TextView
+                            android:id="@+id/txtPassword"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_password"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtUsername" />
+
+                        <TextView
+                            android:id="@+id/txtPasswordData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtPassword"
+                            app:layout_constraintTop_toBottomOf="@id/txtUsername" />
+
+                        <TextView
+                            android:id="@+id/txtSalt"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_salt"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtPassword" />
+
+                        <TextView
+                            android:id="@+id/txtSaltData"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtSalt"
+                            app:layout_constraintTop_toBottomOf="@id/txtPassword" />
+
+                        <TextView
+                            android:id="@+id/txtMd5"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_md5"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtSalt" />
+
+                        <TextView
+                            android:id="@+id/txtMd5Data"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtMd5"
+                            app:layout_constraintTop_toBottomOf="@id/txtSalt" />
+
+                        <TextView
+                            android:id="@+id/txtSha1"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_sha1"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtMd5" />
+
+                        <TextView
+                            android:id="@+id/txtSha1Data"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtSha1"
+                            app:layout_constraintTop_toBottomOf="@id/txtMd5" />
+
+                        <TextView
+                            android:id="@+id/txtSha256"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:text="@string/app_name_sha256"
+                            android:textColor="@color/gray"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtSha1" />
+
+                        <TextView
+                            android:id="@+id/txtSha256Data"
+                            style="@style/wrapContent"
+                            android:layout_marginStart="10dp"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            app:layout_constraintStart_toEndOf="@+id/txtSha256"
+                            app:layout_constraintTop_toBottomOf="@id/txtSha1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
